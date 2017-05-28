@@ -8,14 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">My LOGO</a>
-      <a class="navbar-brand" href=""#">Welcome to Raw Material Planning</a>
+       <%= link_to "MY LOGO", root_path, class: "navbar-brand btn btn-medium btn-success" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li> <%= link_to "link1","", class: "btn btn-lg" %></li>
+        <li> <%= link_to "New Recipe",new_recipe_path, class: "btn btn-lg" %></li>
         <li> <%= link_to "link2","", class: "btn btn-lg" %></li>
         <li> <%= link_to "link3","", class: "btn btn-lg" %></li>
         <li> <%= link_to "SignUp","", class: "glyphicon glyphicon-user" %></li>
