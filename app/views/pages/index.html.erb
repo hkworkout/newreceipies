@@ -1,45 +1,22 @@
-<div class="table-responsive">
 
-<table>
-  <tr>
-    <td rowspan="2">
+  <div class="row" >
     <div class="jumbotron">
-          <h1>Welcome to my Recipies Application</h1>
-          <p>This application can be used for planning raw material requirement for today.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      <h1>Welcome to my Recipies Application</h1>
+      <p>This is my recipes website. You can register and upload your recipes</p>
+      <p><%= link_to "Sign Up!",register_path,class: "btn btn-primary btn-lg"  %></p>
     </div>
-    </td>
-    <td>
-      <h3>Raw Material Planning</h3>
-      <p>This application can be used for planning raw material requirement for today.</p>
-      <p> <%= link_to "Sign On!","",class: "btn btn-success btn-lg" %> </p>
-    </td>
-    </tr>
-  <tr>
-    <td>
-      <h3>Raw Material Planning</h3>
-      <p>This application can be used for planning raw material requirement for today.</p>
-      <p><%= link_to "Sign Up!","",class: "btn btn-info btn-lg"  %></p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-          <div class="caption">
-            <h3>View Recipes as Guest User</h3>
-            <p>View recipes list as guest user and you can signup later</p>
-            <p> <%= link_to "View Recipie Listing", recipes_path, class:"btn btn-primary" %></p>
-          </div>
-    </td>
-    <td>
-          <div class="caption">
-            <h3>South</h3>
-            <p>South Region is located in Texas. Please Contact Henry for more information</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More</a></p>
-          </div>
+  </div>
 
-    </td>
+  <div class="row">
+    <div class="col-sm-6 quite caption">
+      <h3>View Recipes as Guest User</h3>
+      <p>View recipes list as guest user and you can signup later</p>
+      <p> <%= link_to "View Recipie Listing", recipes_path, class:"btn btn-warning" %></p>
+    </div>
 
-  </tr>
-
-</table>
-</div>
+    <div class="col-sm-6 quite caption">
+      <h3>Add/Update Recipes</h3>
+      <p>Sign-in to view recipes. Sign in to create and update your recipes.</p>
+      <p> <%= link_to "Sign In!" ,login_path, class:"btn btn-success" %> </p>
+    </div>
+  </div>

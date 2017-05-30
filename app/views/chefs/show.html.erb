@@ -1,19 +1,28 @@
-<%= render 'shared/page_title', title: "All Recipes" %>
+<%= render '/shared/page_title', title: @chef.chefname %>
 
-  <%= will_paginate %>
+<div class="row">
+
+  <div class="col-sm-4 col-sm-offset-4 center">
+    <%= gravatar_for @chef, size: 100 %>
+    <hr/>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-4 col-sm-offset-4 center">
+    <h5>Recipes</h5>
+    <%= will_paginate @recipes %>
+  </div>
+
+</div>
 
 
-  <% @recipes.each do |recipe| %>
+<% @recipes.each do |recipe| %>
     <div class="row">
-  
-      <div class="col-sm-2 col-md-2">
-        <section class="chef_info center">
-          <%= link_to gravatar_for(recipe.chef, size: 80), chef_path(recipe.chef)%>
-          <h5>Chef name: <%= recipe.chef.chefname%></h5>
-        </section>
-      </div>
 
-      <div class="col-sm-6 col-md-6 well">
+      <div class="col-sm-8 well">
         <h4> <%= link_to recipe.name, recipe_path(recipe) %></h4>
         <p><%= recipe.summary %> </p>
         <p>
@@ -38,10 +47,7 @@
       </div>
 
     </div>
-  <hr/>
+    <hr/>
 <% end %>
 
-<%= will_paginate %>
-
-
-
+<hr/>

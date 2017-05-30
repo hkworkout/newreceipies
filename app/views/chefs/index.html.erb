@@ -1,0 +1,22 @@
+<%= render 'shared/page_title', title: "All chefs" %>
+
+<div class="row" >
+   <div class="col-sm-4 col-sm-offset-4 center">
+        <%= will_paginate %>
+    </div>
+</div>
+
+<% @chefs.each do |chef| %>
+    <div class="row" >
+       <div class="col-sm-4 center">
+            <%= link_to gravatar_for(chef, size: 200), chef_path(chef) %>
+        </div>
+        <div class=" col-sm-8 center well">
+            <p><h3><%= chef.chefname %></h3></p>
+            <p><h5><%= chef.email %></h5></p>
+            <p> Created:  <%= time_ago_in_words(chef.created_at) %> ago</p>
+            <p> Updated:  <%= time_ago_in_words(chef.updated_at) %> ago</p>
+        </div>
+    </div>
+    <hr/>
+<% end %>

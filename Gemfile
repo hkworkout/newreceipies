@@ -30,6 +30,9 @@ gem 'mini_magick'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 
+# Adding Gems for authentication
+gem 'bcrypt', '~> 3.1.7'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

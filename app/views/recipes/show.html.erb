@@ -2,14 +2,16 @@
 
 <div class="row">
   <div class="col-sm-4 col-md-4 pull-right center">
-    <%= gravatar_for @recipe.chef, size: 100 %>
+    <%= link_to gravatar_for(@recipe.chef, size: 100), chef_path(@recipe.chef)%>
     <p>
       Brought you by <%= @recipe.chef.chefname %>
     </p>
   </div>
 
   <div class="col-sm-8 col-md-8">
+    <% if logged_in? and @recipe.chef == current_user %>
       <%= link_to "Edit Recipe",edit_recipe_path,class: "btn btn-small btn-success pull-right" %>
+    <% end %>
       <h4><%= @recipe.summary %></h4>
       <div class="show_recipe">
           <%= image_tag(@recipe.picture.url, size: '250x250',class: "gravatar") if @recipe.picture? %>
